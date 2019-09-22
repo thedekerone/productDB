@@ -30,6 +30,15 @@ app.use(
 		graphiql  : false
 	})
 );
+
+var reqTimer = setTimeout(function wakeUp() {
+	request('https://jstoredb.herokuapp.com', function() {
+		console.log('WAKE UP DYNO');
+	});
+	return (reqTimer = setTimeout(wakeUp, 1200000));
+}, 1200000);
+reqTimer();
+
 app.listen(process.env.PORT || 8000, function() {
 	console.log('Express server listening on port %d in %s mode', this.address().port, app.settings.env);
 });
