@@ -8,7 +8,7 @@
 		"lint": "standard",
 		"lint-fix": "standard --fix",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "NODE_ENV=production node app"
+		"start": "node app"
 	},
 	"keywords": [],
 	"author": "",
