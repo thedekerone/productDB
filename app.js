@@ -30,6 +30,6 @@ app.use(
 		graphiql  : isDev
 	})
 );
-app.listen(port).then(({ url }) => {
-	console.log(`🚀 Server ready at ${url}`);
+app.listen(port, () => {
+	console.log('server on ps');
 });
